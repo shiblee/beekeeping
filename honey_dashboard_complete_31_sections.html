@@ -1,0 +1,1157 @@
+
+<h2 class="sr-only">Honey Intelligence Dashboard — Complete 31-section beekeeping producers survey, Uttar Pradesh</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.hd{background:#FFFDF7;color:#2E2E2E;font-size:13px;line-height:1.5;font-family:inherit}
+.topbar{background:#fff;border-bottom:1px solid #F0E6D6;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:200}
+.logo{display:flex;align-items:center;gap:9px}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,#F6C453,#F2A900);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.logo-text{font-size:14px;font-weight:600;line-height:1.2}
+.logo-text span{display:block;font-size:10px;font-weight:400;color:#6B6B6B}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{padding:4px 10px;border-radius:20px;border:1px solid #F0E6D6;background:#FFFDF7;font-size:11px;color:#6B6B6B;cursor:pointer}
+.chip select{border:none;background:none;font-size:11px;color:inherit;cursor:pointer;outline:none;font-family:inherit}
+.chip.on{background:#FFF3D6;border-color:#F6C453;color:#8B6200;font-weight:500}
+.nav-tabs{display:flex;gap:2px;overflow-x:auto;padding:10px 20px 0;background:#fff;border-bottom:1px solid #F0E6D6;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.tab{padding:7px 14px;border-radius:8px 8px 0 0;font-size:11px;font-weight:500;cursor:pointer;color:#6B6B6B;white-space:nowrap;border:1px solid transparent;border-bottom:none;background:none;transition:.15s;font-family:inherit}
+.tab:hover{color:#8B6200;background:#FFF8E6}
+.tab.on{color:#8B6200;background:#FFFDF7;border-color:#F0E6D6;border-bottom:1px solid #FFFDF7;margin-bottom:-1px}
+.panel{display:none;padding:20px}
+.panel.on{display:block}
+.sh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#A8A8A8;font-weight:500;margin-bottom:3px}
+.st{font-size:18px;font-weight:600;margin-bottom:16px}
+.kpi-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:18px}
+.kc{background:#fff;border-radius:14px;padding:16px 14px;box-shadow:0 3px 12px rgba(0,0,0,.06);position:relative;overflow:hidden;transition:.2s}
+.kc:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.09)}
+.kc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ak,linear-gradient(90deg,#F6C453,#F2A900));border-radius:14px 14px 0 0}
+.ki{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:8px;background:var(--ib,#FFF3D6)}
+.kn{font-size:22px;font-weight:700;line-height:1}
+.kl{font-size:11px;color:#6B6B6B;margin-top:2px}
+.kt{display:inline-block;font-size:10px;padding:2px 7px;border-radius:8px;margin-top:6px;font-weight:500}
+.tg{background:#E9F7EC;color:#2E7D32}.tr{background:#FEE8E8;color:#C62828}.ty{background:#FFF3D6;color:#8B6200}.tb{background:#E3F2FD;color:#0D47A1}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:14px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.cc{background:#fff;border-radius:14px;padding:18px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.ct{font-size:13px;font-weight:600;margin-bottom:2px}
+.cs{font-size:10px;color:#6B6B6B;margin-bottom:12px}
+.bars{display:flex;flex-direction:column;gap:8px}
+.br{display:flex;align-items:center;gap:7px}
+.bl{font-size:11px;color:#6B6B6B;width:110px;flex-shrink:0;text-align:right}
+.bl.w90{width:90px}.bl.w130{width:130px}
+.bt{flex:1;height:18px;background:#F7F0E4;border-radius:5px;overflow:hidden}
+.bf{height:100%;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;font-size:10px;font-weight:600;transition:width .8s cubic-bezier(.4,0,.2,1)}
+.fg{background:linear-gradient(90deg,#81C784,#43A047);color:#fff}
+.fa{background:linear-gradient(90deg,#FAD56C,#F2A900);color:#5C3D00}
+.fb{background:linear-gradient(90deg,#64B5F6,#1976D2);color:#fff}
+.fp{background:linear-gradient(90deg,#CE93D8,#7B1FA2);color:#fff}
+.fc{background:linear-gradient(90deg,#FF8A65,#E64A19);color:#fff}
+.ft{background:linear-gradient(90deg,#4DB6AC,#00796B);color:#fff}
+.fr{background:linear-gradient(90deg,#EF9A9A,#C62828);color:#fff}
+.dw{display:flex;align-items:center;gap:14px}
+.leg{display:flex;flex-direction:column;gap:6px}
+.lr{display:flex;align-items:center;gap:7px;font-size:11px;color:#2E2E2E}
+.ld{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.band{border-radius:16px;padding:20px;margin-bottom:14px}
+.band-honey{background:linear-gradient(135deg,#FFF8E6,#FFF3D0,#FFF8E6);border:1px solid #F0E6D6}
+.band-green{background:linear-gradient(135deg,#F1FAF2,#E9F7EC);border:1px solid #C8E6C9}
+.band-eco{background:#FFF3D6;border:1px solid #F6D87A}
+.band-loss{background:linear-gradient(135deg,#FFF5F5,#FEF0F0);border:1px solid #FFCDD2}
+.band-blue{background:linear-gradient(135deg,#F0F7FF,#E8F1FF);border:1px solid #BBDEFB}
+.band-purple{background:linear-gradient(135deg,#F8F0FF,#F3E5F5);border:1px solid #E1BEE7}
+.ic{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.ip{padding:4px 10px;border-radius:16px;font-size:11px;font-weight:500}
+.ig{background:#E9F7EC;color:#2E7D32;border:1px solid #C8E6C9}
+.iy{background:#FFF3D6;color:#8B6200;border:1px solid #F6D87A}
+.ib{background:#E3F2FD;color:#0D47A1;border:1px solid #BBDEFB}
+.ir{background:#FEE8E8;color:#C62828;border:1px solid #FFCDD2}
+.ip2{background:#F3E5F5;color:#4A148C;border:1px solid #E1BEE7}
+.divr{height:1px;background:#F0E6D6;margin:14px 0}
+.loss-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
+.lc{background:#fff;border-radius:12px;padding:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.lv{font-size:20px;font-weight:700}
+.ll{font-size:10px;color:#6B6B6B;margin-top:2px}
+.scheme-tbl{width:100%;border-collapse:collapse;font-size:11px}
+.scheme-tbl th{padding:8px 10px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#6B6B6B;font-weight:600;background:#FFFDF7;border-bottom:1px solid #F0E6D6}
+.scheme-tbl td{padding:8px 10px;border-bottom:1px solid #FAF6F0}
+.scheme-tbl tr:hover td{background:#FFF8E6}
+.pill{display:inline-block;padding:2px 7px;border-radius:7px;font-size:10px;font-weight:500}
+.py2{background:#FFF3D6;color:#8B6200}.pg2{background:#E9F7EC;color:#2E7D32}.pb2{background:#E3F2FD;color:#0D47A1}.pr2{background:#FEE8E8;color:#C62828}.pp2{background:#F3E5F5;color:#4A148C}.pt2{background:#E0F2F1;color:#004D40}
+.srch-wrap{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #F0E6D6;border-radius:10px;padding:7px 12px;margin-bottom:12px}
+.srch-wrap input{border:none;background:none;outline:none;font-size:12px;color:#2E2E2E;flex:1;font-family:inherit}
+.srch-wrap input::placeholder{color:#C0B8A8}
+.var-tbl-wrap{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.var-scroll{max-height:340px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#F0E6D6 transparent}
+.var-tbl{width:100%;border-collapse:collapse;font-size:11px}
+.var-tbl th{padding:8px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#6B6B6B;font-weight:600;background:#FFFDF7;border-bottom:1px solid #F0E6D6;position:sticky;top:0}
+.var-tbl td{padding:7px 12px;border-bottom:1px solid #FAF6F0;color:#2E2E2E}
+.var-tbl tr:nth-child(even) td{background:#FFFDF7}
+.var-tbl tr:hover td{background:#FFF8E6}
+.stat3{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat3-cell{text-align:center;padding:14px 10px}
+.stat3-val{font-size:24px;font-weight:700}
+.stat3-lbl{font-size:10px;color:#6B6B6B;margin-top:2px}
+</style>
+
+<div class="hd">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="logo">
+    <div class="logo-icon">🐝</div>
+    <div class="logo-text">Honey Intelligence Dashboard<span>Beekeeping Producers Survey · UP · 31 Sections</span></div>
+  </div>
+  <div class="chips">
+    <div class="chip"><select onchange="this.parentElement.className='chip'+(this.value!='all'?' on':'')"><option value="all">All Districts</option><option>Lucknow</option><option>Varanasi</option><option>Prayagraj</option><option>Gorakhpur</option><option>Agra</option></select></div>
+    <div class="chip"><select onchange="this.parentElement.className='chip'+(this.value!='all'?' on':'')"><option value="all">All Years</option><option>2021</option><option>2022</option><option>2023</option></select></div>
+    <div class="chip"><select onchange="this.parentElement.className='chip'+(this.value!='all'?' on':'')"><option value="all">All Types</option><option>Modern</option><option>Traditional</option><option>Transitional</option></select></div>
+    <div class="chip"><select onchange="this.parentElement.className='chip'+(this.value!='all'?' on':'')"><option value="all">All Gender</option><option>Male</option><option>Female</option></select></div>
+  </div>
+</div>
+
+<!-- NAV TABS -->
+<div class="nav-tabs">
+  <button class="tab on" onclick="sw('overview',this)">🐝 Overview</button>
+  <button class="tab" onclick="sw('producer',this)">🧑‍🌾 Producer Info</button>
+  <button class="tab" onclick="sw('family',this)">👨‍👩‍👧 Family & Land</button>
+  <button class="tab" onclick="sw('colonies',this)">🏡 Colony Setup</button>
+  <button class="tab" onclick="sw('operations',this)">⚙️ Operations</button>
+  <button class="tab" onclick="sw('production',this)">🍯 Production</button>
+  <button class="tab" onclick="sw('costs',this)">💰 Cost of Prod.</button>
+  <button class="tab" onclick="sw('losses',this)">⚠️ Losses & Risk</button>
+  <button class="tab" onclick="sw('sales',this)">🏪 Sales 2021–23</button>
+  <button class="tab" onclick="sw('coproducts',this)">🌿 Co-Products</button>
+  <button class="tab" onclick="sw('branding',this)">🏷️ Grading & Brand</button>
+  <button class="tab" onclick="sw('training',this)">🎓 Training</button>
+  <button class="tab" onclick="sw('processing',this)">🏭 Processing Unit</button>
+  <button class="tab" onclick="sw('export',this)">✈️ Export</button>
+  <button class="tab" onclick="sw('market',this)">📊 Market & Contract</button>
+  <button class="tab" onclick="sw('schemes',this)">🏛️ Govt Schemes</button>
+  <button class="tab" onclick="sw('pollination',this)">🌸 Pollination</button>
+  <button class="tab" onclick="sw('variety',this)">🫙 Variety Sales</button>
+  <button class="tab" onclick="sw('variables',this)">🔍 All Variables</button>
+</div>
+
+<!-- ══ OVERVIEW ══ -->
+<div id="p-overview" class="panel on">
+  <div class="sh">Survey overview</div>
+  <div class="st">At a glance — all 31 sections</div>
+  <div class="kpi-g">
+    <div class="kc" style="--ak:linear-gradient(90deg,#F6C453,#F2A900)"><div class="ki" style="--ib:#FFF3D6">🧑‍🌾</div><div class="kn">10,482</div><div class="kl">Total beekeepers</div><div class="kt ty">74% NBB registered</div></div>
+    <div class="kc" style="--ak:linear-gradient(90deg,#81C784,#43A047)"><div class="ki" style="--ib:#E9F7EC">🍯</div><div class="kn">48,300 T</div><div class="kl">Total honey output</div><div class="kt tg">↑ 12% YoY</div></div>
+    <div class="kc" style="--ak:linear-gradient(90deg,#F6C453,#F2A900)"><div class="ki" style="--ib:#FFF3D6">💰</div><div class="kn">₹72.6K</div><div class="kl">Avg annual income</div><div class="kt ty">57% profit margin</div></div>
+    <div class="kc" style="--ak:linear-gradient(90deg,#64B5F6,#1976D2)"><div class="ki" style="--ib:#E3F2FD">🐝</div><div class="kn">2.4 M</div><div class="kl">Active colonies</div><div class="kt tb">Avg 229 / producer</div></div>
+    <div class="kc" style="--ak:linear-gradient(90deg,#CE93D8,#7B1FA2)"><div class="ki" style="--ib:#F3E5F5">📍</div><div class="kn">75</div><div class="kl">Districts covered</div><div class="kt tg">Full UP</div></div>
+    <div class="kc" style="--ak:linear-gradient(90deg,#EF9A9A,#C62828)"><div class="ki" style="--ib:#FEE8E8">⚠️</div><div class="kn">14.2%</div><div class="kl">Avg loss rate</div><div class="kt tr">↑ +2.1pp</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc">
+      <div class="ct">Honey output trend — 2021 to 2023</div>
+      <div class="cs">Quarterly production in thousand tonnes</div>
+      <div style="position:relative;height:150px"><canvas id="trendC" role="img" aria-label="Rising honey output from 14k to 20k tonnes across 2021-2023">Output rising 2021–2023.</canvas></div>
+    </div>
+    <div class="cc">
+      <div class="ct">Top districts by colony count</div>
+      <div class="cs">Section 1.4 × 3.1 — thousands</div>
+      <div class="bars" style="margin-top:6px">
+        <div class="br"><div class="bl">Varanasi</div><div class="bt"><div class="bf fa" style="width:92%">92k</div></div></div>
+        <div class="br"><div class="bl">Lucknow</div><div class="bt"><div class="bf fa" style="width:84%">84k</div></div></div>
+        <div class="br"><div class="bl">Prayagraj</div><div class="bt"><div class="bf fa" style="width:76%">76k</div></div></div>
+        <div class="br"><div class="bl">Gorakhpur</div><div class="bt"><div class="bf fg" style="width:71%">71k</div></div></div>
+        <div class="br"><div class="bl">Agra</div><div class="bt"><div class="bf fg" style="width:64%">64k</div></div></div>
+        <div class="br"><div class="bl">Meerut</div><div class="bt"><div class="bf fb" style="width:58%">58k</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="g3">
+    <div class="cc"><div class="ct">Beekeeping type</div><div class="cs">Sec 6</div><div class="dw"><svg width="72" height="72" viewBox="0 0 36 36" role="img" aria-label="63% modern, 24% traditional, 13% transitional"><circle cx="18" cy="18" r="13" fill="none" stroke="#F7F0E4" stroke-width="5"/><circle cx="18" cy="18" r="13" fill="none" stroke="#43A047" stroke-width="5" stroke-dasharray="63 37" stroke-dashoffset="25" stroke-linecap="round"/><circle cx="18" cy="18" r="13" fill="none" stroke="#F2A900" stroke-width="5" stroke-dasharray="24 76" stroke-dashoffset="-38" stroke-linecap="round"/><circle cx="18" cy="18" r="13" fill="none" stroke="#1976D2" stroke-width="5" stroke-dasharray="13 87" stroke-dashoffset="-62" stroke-linecap="round"/></svg><div class="leg"><div class="lr"><div class="ld" style="background:#43A047"></div>Modern (63%)</div><div class="lr"><div class="ld" style="background:#F2A900"></div>Traditional (24%)</div><div class="lr"><div class="ld" style="background:#1976D2"></div>Transitional (13%)</div></div></div></div>
+    <div class="cc"><div class="ct">Engagement level</div><div class="cs">Sec 7</div><div class="dw"><svg width="72" height="72" viewBox="0 0 36 36" role="img" aria-label="55% full-time, 28% part-time, 17% hobby"><circle cx="18" cy="18" r="13" fill="none" stroke="#F7F0E4" stroke-width="5"/><circle cx="18" cy="18" r="13" fill="none" stroke="#F2A900" stroke-width="5" stroke-dasharray="55 45" stroke-dashoffset="25" stroke-linecap="round"/><circle cx="18" cy="18" r="13" fill="none" stroke="#43A047" stroke-width="5" stroke-dasharray="28 72" stroke-dashoffset="-30" stroke-linecap="round"/><circle cx="18" cy="18" r="13" fill="none" stroke="#CE93D8" stroke-width="5" stroke-dasharray="17 83" stroke-dashoffset="-58" stroke-linecap="round"/></svg><div class="leg"><div class="lr"><div class="ld" style="background:#F2A900"></div>Full-time (55%)</div><div class="lr"><div class="ld" style="background:#43A047"></div>Part-time (28%)</div><div class="lr"><div class="ld" style="background:#CE93D8"></div>Hobby (17%)</div></div></div></div>
+    <div class="cc"><div class="ct">Sales channel 2023</div><div class="cs">Sec 13.5</div><div class="bars" style="margin-top:4px"><div class="br"><div class="bl w90">Processing</div><div class="bt"><div class="bf fa" style="width:42%">42%</div></div></div><div class="br"><div class="bl w90">Retailer</div><div class="bt"><div class="bf fg" style="width:28%">28%</div></div></div><div class="br"><div class="bl w90">Consumer</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div><div class="br"><div class="bl w90">Local shop</div><div class="bt"><div class="bf fp" style="width:8%">8%</div></div></div><div class="br"><div class="bl w90">Fair / expo</div><div class="bt"><div class="bf ft" style="width:4%">4%</div></div></div></div></div>
+  </div>
+</div>
+
+<!-- ══ PRODUCER INFO ══ -->
+<div id="p-producer" class="panel">
+  <div class="sh">Section 1 — Producer demographics</div>
+  <div class="st">Who are the beekeepers?</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="ki" style="--ib:#E3F2FD">👤</div><div class="kn">10,482</div><div class="kl">Registered producers</div></div>
+    <div class="kc"><div class="ki" style="--ib:#FFF3D6">📅</div><div class="kn">41 yrs</div><div class="kl">Average age</div><div class="kt ty">Range 18–80</div></div>
+    <div class="kc"><div class="ki" style="--ib:#E9F7EC">💍</div><div class="kn">82%</div><div class="kl">Married</div></div>
+    <div class="kc"><div class="ki" style="--ib:#FFF3D6">🎓</div><div class="kn">31%</div><div class="kl">Graduate+</div></div>
+    <div class="kc"><div class="ki" style="--ib:#E3F2FD">📞</div><div class="kn">98%</div><div class="kl">Have mobile</div></div>
+    <div class="kc"><div class="ki" style="--ib:#F3E5F5">📋</div><div class="kn">74%</div><div class="kl">NBB registered</div></div>
+  </div>
+  <div class="g3">
+    <div class="cc"><div class="ct">Gender (sec 1.8)</div><div class="dw" style="margin-top:10px"><svg width="72" height="72" viewBox="0 0 36 36" role="img" aria-label="76% male 24% female"><circle cx="18" cy="18" r="13" fill="none" stroke="#F7F0E4" stroke-width="5"/><circle cx="18" cy="18" r="13" fill="none" stroke="#1976D2" stroke-width="5" stroke-dasharray="76 24" stroke-dashoffset="25" stroke-linecap="round"/><circle cx="18" cy="18" r="13" fill="none" stroke="#F06292" stroke-width="5" stroke-dasharray="24 76" stroke-dashoffset="-51" stroke-linecap="round"/></svg><div class="leg"><div class="lr"><div class="ld" style="background:#1976D2"></div>Male (76%)</div><div class="lr"><div class="ld" style="background:#F06292"></div>Female (24%)</div></div></div></div>
+    <div class="cc"><div class="ct">Religion (sec 1.9)</div><div class="bars" style="margin-top:10px"><div class="br"><div class="bl w90">Hindu</div><div class="bt"><div class="bf fa" style="width:72%">72%</div></div></div><div class="br"><div class="bl w90">Muslim</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div><div class="br"><div class="bl w90">Sikh</div><div class="bt"><div class="bf ft" style="width:6%">6%</div></div></div><div class="br"><div class="bl w90">Christian</div><div class="bt"><div class="bf fp" style="width:4%">4%</div></div></div></div></div>
+    <div class="cc"><div class="ct">Caste (sec 1.10)</div><div class="bars" style="margin-top:10px"><div class="br"><div class="bl w90">General</div><div class="bt"><div class="bf fa" style="width:34%">34%</div></div></div><div class="br"><div class="bl w90">OBC</div><div class="bt"><div class="bf fg" style="width:42%">42%</div></div></div><div class="br"><div class="bl w90">SC</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div><div class="br"><div class="bl w90">ST</div><div class="bt"><div class="bf fp" style="width:6%">6%</div></div></div></div></div>
+    <div class="cc"><div class="ct">Education (sec 1.11)</div><div class="bars" style="margin-top:10px"><div class="br"><div class="bl w90">Graduate+</div><div class="bt"><div class="bf fg" style="width:31%">31%</div></div></div><div class="br"><div class="bl w90">High school</div><div class="bt"><div class="bf fa" style="width:19%">19%</div></div></div><div class="br"><div class="bl w90">Secondary</div><div class="bt"><div class="bf fa" style="width:21%">21%</div></div></div><div class="br"><div class="bl w90">Primary</div><div class="bt"><div class="bf fc" style="width:18%">18%</div></div></div><div class="br"><div class="bl w90">Uneducated</div><div class="bt"><div class="bf fr" style="width:11%">11%</div></div></div></div></div>
+    <div class="cc"><div class="ct">Marital status (sec 1.12)</div><div class="bars" style="margin-top:10px"><div class="br"><div class="bl w90">Married</div><div class="bt"><div class="bf fg" style="width:82%">82%</div></div></div><div class="br"><div class="bl w90">Unmarried</div><div class="bt"><div class="bf fa" style="width:13%">13%</div></div></div><div class="br"><div class="bl w90">Widow/er</div><div class="bt"><div class="bf fp" style="width:5%">5%</div></div></div></div></div>
+    <div class="cc"><div class="ct">Main occupation (sec 1.14)</div><div class="bars" style="margin-top:10px"><div class="br"><div class="bl w90">Agriculture</div><div class="bt"><div class="bf fg" style="width:58%">58%</div></div></div><div class="br"><div class="bl w90">Animal husb.</div><div class="bt"><div class="bf fa" style="width:19%">19%</div></div></div><div class="br"><div class="bl w90">Private job</div><div class="bt"><div class="bf fb" style="width:11%">11%</div></div></div><div class="br"><div class="bl w90">Trade</div><div class="bt"><div class="bf fp" style="width:8%">8%</div></div></div><div class="br"><div class="bl w90">Other</div><div class="bt"><div class="bf ft" style="width:4%">4%</div></div></div></div></div>
+  </div>
+</div>
+
+<!-- ══ FAMILY & LAND ══ -->
+<div id="p-family" class="panel">
+  <div class="sh">Sections 1.13 · 1.14 · 2 — Family demographics & land use</div>
+  <div class="st">Household structure and land holdings</div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Family size distribution (sec 1.13)</div><div class="cs">Average members per household</div>
+      <div class="band band-green" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px">
+        <div style="text-align:center;padding:12px"><div style="font-size:22px;font-weight:700;color:#2E7D32">1.8</div><div style="font-size:10px;color:#6B6B6B">Men / HH</div></div>
+        <div style="text-align:center;padding:12px;border-left:1px solid #C8E6C9;border-right:1px solid #C8E6C9"><div style="font-size:22px;font-weight:700;color:#2E7D32">1.4</div><div style="font-size:10px;color:#6B6B6B">Women / HH</div></div>
+        <div style="text-align:center;padding:12px"><div style="font-size:22px;font-weight:700;color:#2E7D32">1.2</div><div style="font-size:10px;color:#6B6B6B">Children / HH</div></div>
+      </div>
+      <div class="divr"></div>
+      <div class="ct">Family labor in beekeeping (sec 1.14.1–3)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Men working</div><div class="bt"><div class="bf fg" style="width:72%">Avg 1.8</div></div></div>
+        <div class="br"><div class="bl">Women working</div><div class="bt"><div class="bf fp" style="width:36%">Avg 0.9</div></div></div>
+        <div class="br"><div class="bl">Children working</div><div class="bt"><div class="bf fc" style="width:8%">Avg 0.2</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Land ownership type (sec 2)</div><div class="cs">% of respondents with each land category</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Own land</div><div class="bt"><div class="bf fg" style="width:68%">68%</div></div></div>
+        <div class="br"><div class="bl">Leased in</div><div class="bt"><div class="bf fa" style="width:29%">29%</div></div></div>
+        <div class="br"><div class="bl">Leased out</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div>
+        <div class="br"><div class="bl">Fallow land</div><div class="bt"><div class="bf fp" style="width:14%">14%</div></div></div>
+      </div>
+      <div class="divr"></div>
+      <div class="ct">Irrigation source (sec 2.A.4)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Tubewell pvt</div><div class="bt"><div class="bf fa" style="width:44%">44%</div></div></div>
+        <div class="br"><div class="bl">Tubewell govt</div><div class="bt"><div class="bf fg" style="width:22%">22%</div></div></div>
+        <div class="br"><div class="bl">Canal</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div>
+        <div class="br"><div class="bl">Pond / well</div><div class="bt"><div class="bf ft" style="width:11%">11%</div></div></div>
+        <div class="br"><div class="bl">Pumping set</div><div class="bt"><div class="bf fp" style="width:5%">5%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COLONY SETUP ══ -->
+<div id="p-colonies" class="panel">
+  <div class="sh">Sections 3 · 4 · 5 · 6 — Colony setup & source</div>
+  <div class="st">Colony ownership and acquisition</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">2.4 M</div><div class="kl">Total colonies</div><div class="kt ty">Avg 229/producer</div></div>
+    <div class="kc"><div class="kn">₹3,800</div><div class="kl">Avg cost/colony</div></div>
+    <div class="kc"><div class="kn">4.2</div><div class="kl">Avg hives/box</div></div>
+    <div class="kc"><div class="kn">2019</div><div class="kl">Median start year</div></div>
+    <div class="kc"><div class="kn">38%</div><div class="kl">Started via Govt/NGO</div><div class="kt tg">Sec 4</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">How beekeeping was started (sec 4)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Govt / NGO gift</div><div class="bt"><div class="bf fg" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl w130">Inheritance</div><div class="bt"><div class="bf fa" style="width:27%">27%</div></div></div>
+        <div class="br"><div class="bl w130">Market purchase</div><div class="bt"><div class="bf fb" style="width:22%">22%</div></div></div>
+        <div class="br"><div class="bl w130">Forest / wild</div><div class="bt"><div class="bf fg" style="width:8%">8%</div></div></div>
+        <div class="br"><div class="bl w130">Flock catching</div><div class="bt"><div class="bf fp" style="width:3%">3%</div></div></div>
+        <div class="br"><div class="bl w130">Backyard / courtyard</div><div class="bt"><div class="bf ft" style="width:2%">2%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Colony source type (sec 6)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Modern box</div><div class="bt"><div class="bf fg" style="width:63%">63%</div></div></div>
+        <div class="br"><div class="bl">Traditional</div><div class="bt"><div class="bf fa" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl">Transitional</div><div class="bt"><div class="bf fb" style="width:13%">13%</div></div></div>
+      </div>
+      <div class="divr"></div>
+      <div class="ct">Colony ownership size (sec 3.1)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">1–50</div><div class="bt"><div class="bf fg" style="width:34%">34%</div></div></div>
+        <div class="br"><div class="bl">51–200</div><div class="bt"><div class="bf fa" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl">201–500</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl">500+</div><div class="bt"><div class="bf fp" style="width:9%">9%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ OPERATIONS ══ -->
+<div id="p-operations" class="panel">
+  <div class="sh">Section 7 — Beekeeping operations</div>
+  <div class="st">How beekeeping is conducted</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">55%</div><div class="kl">Full-time</div><div class="kt ty">Primary livelihood</div></div>
+    <div class="kc"><div class="kn">28%</div><div class="kl">Part-time</div></div>
+    <div class="kc"><div class="kn">44%</div><div class="kl">Migrate colonies</div><div class="kt ty">Sec 7.1</div></div>
+    <div class="kc"><div class="kn">18 kg</div><div class="kl">Avg honey/box</div><div class="kt tg">Sec 7.2</div></div>
+    <div class="kc"><div class="kn">2.3×</div><div class="kl">Avg migrations/yr</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Migration frequency (sec 7.1.1)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Once/year</div><div class="bt"><div class="bf fa" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl">Twice/year</div><div class="bt"><div class="bf fg" style="width:37%">37%</div></div></div>
+        <div class="br"><div class="bl">3+ times</div><div class="bt"><div class="bf fb" style="width:15%">15%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Honey per box per harvest (sec 7.2)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Under 10 kg</div><div class="bt"><div class="bf fr" style="width:12%">12%</div></div></div>
+        <div class="br"><div class="bl">10–15 kg</div><div class="bt"><div class="bf fa" style="width:22%">22%</div></div></div>
+        <div class="br"><div class="bl">15–20 kg</div><div class="bt"><div class="bf fg" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl">20–30 kg</div><div class="bt"><div class="bf fb" style="width:21%">21%</div></div></div>
+        <div class="br"><div class="bl">Over 30 kg</div><div class="bt"><div class="bf fp" style="width:7%">7%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PRODUCTION ══ -->
+<div id="p-production" class="panel">
+  <div class="sh">Section 8 — Production details</div>
+  <div class="st">What is being produced</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">48,300 T</div><div class="kl">Total honey 2021–23</div></div>
+    <div class="kc"><div class="kn">₹212/kg</div><div class="kl">Avg honey price 2023</div><div class="kt tg">↑ from ₹186</div></div>
+    <div class="kc"><div class="kn">22%</div><div class="kl">Below 15 kg benchmark</div><div class="kt tr">Sec 8.1.2.4</div></div>
+    <div class="kc"><div class="kn">41%</div><div class="kl">Sell beeswax</div></div>
+    <div class="kc"><div class="kn">19%</div><div class="kl">Collect pollen</div></div>
+    <div class="kc"><div class="kn">8%</div><div class="kl">Royal jelly</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Honey varieties (sec 8.1.1)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Mustard</div><div class="bt"><div class="bf fa" style="width:72%">72%</div></div></div>
+        <div class="br"><div class="bl">Litchi</div><div class="bt"><div class="bf fg" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl">Eucalyptus</div><div class="bt"><div class="bf fb" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl">Sunflower</div><div class="bt"><div class="bf fp" style="width:16%">16%</div></div></div>
+        <div class="br"><div class="bl">Others</div><div class="bt"><div class="bf ft" style="width:9%">9%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Co-product adoption (sec 8.1.3–7)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Honey</div><div class="bt"><div class="bf fa" style="width:100%">100%</div></div></div>
+        <div class="br"><div class="bl">Beeswax</div><div class="bt"><div class="bf ft" style="width:41%">41%</div></div></div>
+        <div class="br"><div class="bl">Pollen</div><div class="bt"><div class="bf fg" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl">Propolis</div><div class="bt"><div class="bf fb" style="width:12%">12%</div></div></div>
+        <div class="br"><div class="bl">Royal jelly</div><div class="bt"><div class="bf fp" style="width:8%">8%</div></div></div>
+        <div class="br"><div class="bl">Venom</div><div class="bt"><div class="bf fc" style="width:3%">3%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COSTS ══ -->
+<div id="p-costs" class="panel">
+  <div class="sh">Section 9 — Cost of production</div>
+  <div class="st">Fixed cost, variable cost & profit</div>
+  <div class="band band-eco">
+    <div class="stat3">
+      <div class="stat3-cell"><div class="stat3-val" style="color:#8B6200">₹18.4k</div><div class="stat3-lbl">Avg fixed cost</div></div>
+      <div class="stat3-cell" style="border-left:1px solid #F6D87A;border-right:1px solid #F6D87A"><div class="stat3-val" style="color:#8B6200">₹31.2k</div><div class="stat3-lbl">Avg variable cost</div></div>
+      <div class="stat3-cell"><div class="stat3-val" style="color:#2E7D32">₹41.4k</div><div class="stat3-lbl">Avg net profit</div></div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Variable cost breakdown (sec 9.1.7–25)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Unskilled labour</div><div class="bt"><div class="bf fc" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl">Skilled labour</div><div class="bt"><div class="bf fc" style="width:18%">18%</div></div></div>
+        <div class="br"><div class="bl">Raw material</div><div class="bt"><div class="bf fa" style="width:16%">16%</div></div></div>
+        <div class="br"><div class="bl">Sugar suppl.</div><div class="bt"><div class="bf fa" style="width:14%">14%</div></div></div>
+        <div class="br"><div class="bl">Transport</div><div class="bt"><div class="bf fb" style="width:11%">11%</div></div></div>
+        <div class="br"><div class="bl">Pest mgmt</div><div class="bt"><div class="bf fr" style="width:9%">9%</div></div></div>
+        <div class="br"><div class="bl">Packing</div><div class="bt"><div class="bf ft" style="width:5%">5%</div></div></div>
+        <div class="br"><div class="bl">Misc.</div><div class="bt"><div class="bf fp" style="width:3%">3%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Processing cost tier (sec 18)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Under ₹5 lakh</div><div class="bt"><div class="bf fg" style="width:61%">61%</div></div></div>
+        <div class="br"><div class="bl">₹5–10 lakh</div><div class="bt"><div class="bf fa" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl">₹10–20 lakh</div><div class="bt"><div class="bf fb" style="width:10%">10%</div></div></div>
+        <div class="br"><div class="bl">Over ₹20 lakh</div><div class="bt"><div class="bf fp" style="width:5%">5%</div></div></div>
+      </div>
+      <div class="ic"><div class="ip ig">Own capital: <b>74%</b></div><div class="ip iy">Borrowed: <b>26%</b></div><div class="ip ig">Profit margin: <b>57%</b></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ LOSSES ══ -->
+<div id="p-losses" class="panel">
+  <div class="sh">Sections 10 · 11 · 12 — Losses, protection & pest management</div>
+  <div class="st">Production losses and risk mitigation</div>
+  <div class="loss-g">
+    <div class="lc"><div class="lv" style="color:#C62828">8.4%</div><div class="ll">Natural calamity</div></div>
+    <div class="lc"><div class="lv" style="color:#C62828">3.2%</div><div class="ll">Disease & pest</div></div>
+    <div class="lc"><div class="lv" style="color:#E64A19">2.8%</div><div class="ll">Post-harvest pkg</div></div>
+    <div class="lc"><div class="lv" style="color:#E64A19">1.6%</div><div class="ll">Wild animals</div></div>
+    <div class="lc"><div class="lv" style="color:#F2A900">1.4%</div><div class="ll">Transport loss</div></div>
+    <div class="lc"><div class="lv" style="color:#F2A900">1.0%</div><div class="ll">Chemical effects</div></div>
+    <div class="lc"><div class="lv" style="color:#F2A900">0.6%</div><div class="ll">Crystallisation</div></div>
+    <div class="lc"><div class="lv" style="color:#F2A900">0.4%</div><div class="ll">Hive destruction</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Natural calamity types (sec 10.1.1)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">High temperature</div><div class="bt"><div class="bf fr" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl">Unseasonal rain</div><div class="bt"><div class="bf fr" style="width:28%">28%</div></div></div>
+        <div class="br"><div class="bl">Storm / cyclone</div><div class="bt"><div class="bf fa" style="width:16%">16%</div></div></div>
+        <div class="br"><div class="bl">Drought</div><div class="bt"><div class="bf fa" style="width:11%">11%</div></div></div>
+        <div class="br"><div class="bl">Hailstorm</div><div class="bt"><div class="bf fb" style="width:7%">7%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Disease & pest types (sec 10.1.2)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Wax worms</div><div class="bt"><div class="bf fr" style="width:44%">44%</div></div></div>
+        <div class="br"><div class="bl">Ants</div><div class="bt"><div class="bf fa" style="width:32%">32%</div></div></div>
+        <div class="br"><div class="bl">Bee-eater birds</div><div class="bt"><div class="bf fa" style="width:21%">21%</div></div></div>
+        <div class="br"><div class="bl">Spiders</div><div class="bt"><div class="bf fb" style="width:13%">13%</div></div></div>
+        <div class="br"><div class="bl">Termites</div><div class="bt"><div class="bf fp" style="width:9%">9%</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cc"><div class="ct">Pest management methods (sec 12)</div><div class="cs">68% adopt protection · 32% do not</div>
+    <div class="bars" style="margin-top:8px">
+      <div class="br"><div class="bl">Chemical spray</div><div class="bt"><div class="bf fr" style="width:52%">52%</div></div></div>
+      <div class="br"><div class="bl">Biological ctrl</div><div class="bt"><div class="bf fg" style="width:31%">31%</div></div></div>
+      <div class="br"><div class="bl">Electric trap</div><div class="bt"><div class="bf fb" style="width:17%">17%</div></div></div>
+    </div>
+    <div class="ic"><div class="ip iy">Empty boxes (sec 11): <b>39%</b> have unused hives</div><div class="ip ig">Adopt protection: <b>68%</b></div></div>
+  </div>
+</div>
+
+<!-- ══ SALES ══ -->
+<div id="p-sales" class="panel">
+  <div class="sh">Section 13 — Selling details 2021 · 2022 · 2023</div>
+  <div class="st">Sales channels, prices and buyer companies</div>
+  <div class="g3">
+    <div class="cc"><div class="ct">Channel mix 2021</div><div class="cs">Sec 13.1</div>
+      <div class="bars" style="margin-top:8px">
+        <div class="br"><div class="bl w90">Processing</div><div class="bt"><div class="bf fa" style="width:35%">35%</div></div></div>
+        <div class="br"><div class="bl w90">Retailer</div><div class="bt"><div class="bf fg" style="width:27%">27%</div></div></div>
+        <div class="br"><div class="bl w90">Consumer</div><div class="bt"><div class="bf fb" style="width:20%">20%</div></div></div>
+        <div class="br"><div class="bl w90">Local shop</div><div class="bt"><div class="bf fp" style="width:13%">13%</div></div></div>
+        <div class="br"><div class="bl w90">Fair</div><div class="bt"><div class="bf ft" style="width:5%">5%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Channel mix 2022</div><div class="cs">Sec 13.3</div>
+      <div class="bars" style="margin-top:8px">
+        <div class="br"><div class="bl w90">Processing</div><div class="bt"><div class="bf fa" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl w90">Retailer</div><div class="bt"><div class="bf fg" style="width:29%">29%</div></div></div>
+        <div class="br"><div class="bl w90">Consumer</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl w90">Local shop</div><div class="bt"><div class="bf fp" style="width:10%">10%</div></div></div>
+        <div class="br"><div class="bl w90">Fair</div><div class="bt"><div class="bf ft" style="width:4%">4%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Channel mix 2023</div><div class="cs">Sec 13.5</div>
+      <div class="bars" style="margin-top:8px">
+        <div class="br"><div class="bl w90">Processing</div><div class="bt"><div class="bf fa" style="width:42%">42%</div></div></div>
+        <div class="br"><div class="bl w90">Retailer</div><div class="bt"><div class="bf fg" style="width:28%">28%</div></div></div>
+        <div class="br"><div class="bl w90">Consumer</div><div class="bt"><div class="bf fb" style="width:18%">18%</div></div></div>
+        <div class="br"><div class="bl w90">Local shop</div><div class="bt"><div class="bf fp" style="width:8%">8%</div></div></div>
+        <div class="br"><div class="bl w90">Fair</div><div class="bt"><div class="bf ft" style="width:4%">4%</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cc"><div class="ct">Top honey processing buyers 2023 (sec 13.5.17)</div><div class="cs">% of honey sold to named companies</div>
+    <div class="bars" style="margin-top:8px">
+      <div class="br"><div class="bl">Patanjali</div><div class="bt"><div class="bf fg" style="width:34%">34%</div></div></div>
+      <div class="br"><div class="bl">Dabur</div><div class="bt"><div class="bf fa" style="width:29%">29%</div></div></div>
+      <div class="br"><div class="bl">Apis India</div><div class="bt"><div class="bf fb" style="width:14%">14%</div></div></div>
+      <div class="br"><div class="bl">Bharat Honey</div><div class="bt"><div class="bf fp" style="width:10%">10%</div></div></div>
+      <div class="br"><div class="bl">Emami</div><div class="bt"><div class="bf ft" style="width:7%">7%</div></div></div>
+      <div class="br"><div class="bl">Others</div><div class="bt"><div class="bf fc" style="width:6%">6%</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CO-PRODUCTS ══ -->
+<div id="p-coproducts" class="panel">
+  <div class="sh">Section 14 — Co-product selling details 2021 · 2022 · 2023</div>
+  <div class="st">Beeswax · Pollen · Royal Jelly · Propolis · Venom</div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Co-product seller % by year</div><div class="cs">% of producers who sold each co-product</div>
+      <div style="position:relative;height:160px;margin-top:8px"><canvas id="cpChart" role="img" aria-label="Co-product sales by year for beeswax, pollen, propolis, royal jelly, venom">Co-product adoption 2021-2023.</canvas></div>
+    </div>
+    <div class="cc"><div class="ct">Co-product sales channels (sec 14)</div><div class="cs">Where co-products are sold</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Local shop</div><div class="bt"><div class="bf fa" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl">Consumer direct</div><div class="bt"><div class="bf fg" style="width:29%">29%</div></div></div>
+        <div class="br"><div class="bl">Processing unit</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl">Private retailer</div><div class="bt"><div class="bf fp" style="width:10%">10%</div></div></div>
+        <div class="br"><div class="bl">Fair / expo</div><div class="bt"><div class="bf ft" style="width:4%">4%</div></div></div>
+      </div>
+      <div class="ic"><div class="ip iy">Personal use (no sale): <b>18%</b> of beeswax</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BRANDING ══ -->
+<div id="p-branding" class="panel">
+  <div class="sh">Section 15 — Post-harvest grading & branding</div>
+  <div class="st">Grading, packaging and brand quality</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">54%</div><div class="kl">Do post-harvest grading</div></div>
+    <div class="kc"><div class="kn">31%</div><div class="kl">Machine grading</div></div>
+    <div class="kc"><div class="kn">69%</div><div class="kl">Manual grading</div></div>
+    <div class="kc"><div class="kn">3</div><div class="kl">Max branding tiers</div><div class="kt ty">Sec 15.3–15.5</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Pack sizes sold (sec 15.3.4–6)</div><div class="cs">% of branded producers using each weight</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">500g jars</div><div class="bt"><div class="bf fa" style="width:52%">52%</div></div></div>
+        <div class="br"><div class="bl">1 kg jars</div><div class="bt"><div class="bf fg" style="width:37%">37%</div></div></div>
+        <div class="br"><div class="bl">250g jars</div><div class="bt"><div class="bf fb" style="width:24%">24%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Honey color grades sold (sec 15.3.7–12)</div><div class="cs">% of graded producers by color category</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Yellow</div><div class="bt"><div class="bf fa" style="width:61%">61%</div></div></div>
+        <div class="br"><div class="bl">Reddish brown</div><div class="bt"><div class="bf fc" style="width:28%">28%</div></div></div>
+        <div class="br"><div class="bl">Dark brown</div><div class="bt"><div class="bf fr" style="width:11%">11%</div></div></div>
+      </div>
+      <div class="divr"></div>
+      <div class="ct">Brand type distribution</div>
+      <div class="bars" style="margin-top:8px">
+        <div class="br"><div class="bl">Mustard honey</div><div class="bt"><div class="bf fa" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl">Litchi honey</div><div class="bt"><div class="bf fg" style="width:29%">29%</div></div></div>
+        <div class="br"><div class="bl">Eucalyptus</div><div class="bt"><div class="bf fb" style="width:14%">14%</div></div></div>
+        <div class="br"><div class="bl">Sunflower</div><div class="bt"><div class="bf fp" style="width:9%">9%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TRAINING ══ -->
+<div id="p-training" class="panel">
+  <div class="sh">Section 16 — Training & capacity building</div>
+  <div class="st">Training coverage, topics and providers</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">58%</div><div class="kl">Received any training</div></div>
+    <div class="kc"><div class="kn">44%</div><div class="kl">Pre-beekeeping trng</div></div>
+    <div class="kc"><div class="kn">31%</div><div class="kl">During-activity trng</div></div>
+    <div class="kc"><div class="kn">19%</div><div class="kl">Post-harvest trng</div></div>
+    <div class="kc"><div class="kn">62%</div><div class="kl">Formal training</div><div class="kt tg">of trained producers</div></div>
+    <div class="kc"><div class="kn">4.3 days</div><div class="kl">Avg training length</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Training topics received (sec 16.1–16.4)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Production practices</div><div class="bt"><div class="bf fg" style="width:67%">67%</div></div></div>
+        <div class="br"><div class="bl w130">Pest & disease ctrl</div><div class="bt"><div class="bf fr" style="width:54%">54%</div></div></div>
+        <div class="br"><div class="bl w130">Apiary management</div><div class="bt"><div class="bf fa" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl w130">Marketing & branding</div><div class="bt"><div class="bf fb" style="width:39%">39%</div></div></div>
+        <div class="br"><div class="bl w130">Co-product practices</div><div class="bt"><div class="bf fp" style="width:28%">28%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Training stage breakdown</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Pre-beekeeping</div><div class="bt"><div class="bf fa" style="width:44%">44%</div></div></div>
+        <div class="br"><div class="bl w130">During activity</div><div class="bt"><div class="bf fg" style="width:31%">31%</div></div></div>
+        <div class="br"><div class="bl w130">Post-harvest</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl w130">Other activities</div><div class="bt"><div class="bf fp" style="width:12%">12%</div></div></div>
+      </div>
+      <div class="ic"><div class="ip ig">Formal: <b>62%</b></div><div class="ip iy">Informal: <b>38%</b></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PROCESSING UNIT ══ -->
+<div id="p-processing" class="panel">
+  <div class="sh">Section 17 — Honey processing unit operations</div>
+  <div class="st">Who operates their own processing unit</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">23%</div><div class="kl">Own processing unit</div><div class="kt ty">Sec 17</div></div>
+    <div class="kc"><div class="kn">4,800 kg</div><div class="kl">Avg processing capacity</div></div>
+    <div class="kc"><div class="kn">3,200 kg</div><div class="kl">Avg processed qty</div></div>
+    <div class="kc"><div class="kn">67%</div><div class="kl">Capacity utilisation</div></div>
+    <div class="kc"><div class="kn">₹14/kg</div><div class="kl">Avg processing cost</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Selling place for processed honey (sec 17.1.4)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Private company</div><div class="bt"><div class="bf fa" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl w130">Govt market</div><div class="bt"><div class="bf fg" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl w130">Village haat</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl w130">eNAM portal</div><div class="bt"><div class="bf fp" style="width:12%">12%</div></div></div>
+        <div class="br"><div class="bl w130">Local agent</div><div class="bt"><div class="bf ft" style="width:7%">7%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Honey variety processed (sec 17.3)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Mustard</div><div class="bt"><div class="bf fa" style="width:68%">68%</div></div></div>
+        <div class="br"><div class="bl">Litchi</div><div class="bt"><div class="bf fg" style="width:41%">41%</div></div></div>
+        <div class="br"><div class="bl">Eucalyptus</div><div class="bt"><div class="bf fb" style="width:22%">22%</div></div></div>
+        <div class="br"><div class="bl">Sunflower</div><div class="bt"><div class="bf fp" style="width:14%">14%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ EXPORT ══ -->
+<div id="p-export" class="panel">
+  <div class="sh">Sections 19 · 20 — Export of honey and co-products</div>
+  <div class="st">Within-state, interstate and international exports</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">18%</div><div class="kl">Export any produce</div></div>
+    <div class="kc"><div class="kn">12%</div><div class="kl">Interstate sales</div></div>
+    <div class="kc"><div class="kn">2.4%</div><div class="kl">International export</div></div>
+    <div class="kc"><div class="kn">9%</div><div class="kl">Export beeswax</div><div class="kt ty">Sec 20</div></div>
+    <div class="kc"><div class="kn">61%</div><div class="kl">Export by self</div></div>
+    <div class="kc"><div class="kn">39%</div><div class="kl">Via agency</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Honey export reach (sec 19)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Within state</div><div class="bt"><div class="bf fg" style="width:62%">62% of exporters</div></div></div>
+        <div class="br"><div class="bl w130">Interstate</div><div class="bt"><div class="bf fa" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl w130">International</div><div class="bt"><div class="bf fb" style="width:13%">13%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Co-product export (sec 20)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Beeswax within UP</div><div class="bt"><div class="bf ft" style="width:54%">54%</div></div></div>
+        <div class="br"><div class="bl">Beeswax interstate</div><div class="bt"><div class="bf fb" style="width:31%">31%</div></div></div>
+        <div class="br"><div class="bl">Beeswax intl</div><div class="bt"><div class="bf fp" style="width:15%">15%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MARKET & CONTRACT ══ -->
+<div id="p-market" class="panel">
+  <div class="sh">Sections 21 · 30 — Market competition & contract farming</div>
+  <div class="st">Competition type, contracts and benefits</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">29%</div><div class="kl">Under contract</div><div class="kt ty">Sec 30</div></div>
+    <div class="kc"><div class="kn">63%</div><div class="kl">Oral contract</div></div>
+    <div class="kc"><div class="kn">37%</div><div class="kl">Written contract</div></div>
+    <div class="kc"><div class="kn">74%</div><div class="kl">Report contract benefits</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Market competition type (sec 21)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Price competition</div><div class="bt"><div class="bf fa" style="width:52%">52%</div></div></div>
+        <div class="br"><div class="bl">Quality competition</div><div class="bt"><div class="bf fg" style="width:31%">31%</div></div></div>
+        <div class="br"><div class="bl">Species / variety</div><div class="bt"><div class="bf fb" style="width:13%">13%</div></div></div>
+        <div class="br"><div class="bl">Other</div><div class="bt"><div class="bf fp" style="width:4%">4%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Contract benefits received (sec 30.5)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Increase production</div><div class="bt"><div class="bf fg" style="width:58%">58%</div></div></div>
+        <div class="br"><div class="bl w130">Farm income up</div><div class="bt"><div class="bf fa" style="width:49%">49%</div></div></div>
+        <div class="br"><div class="bl w130">Input cost down</div><div class="bt"><div class="bf fb" style="width:38%">38%</div></div></div>
+        <div class="br"><div class="bl w130">Quality control</div><div class="bt"><div class="bf ft" style="width:34%">34%</div></div></div>
+        <div class="br"><div class="bl w130">Tech support</div><div class="bt"><div class="bf fp" style="width:27%">27%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GOVT SCHEMES ══ -->
+<div id="p-schemes" class="panel">
+  <div class="sh">Sections 22 · 23 · 24 · 25 · 26 · 27 · 28 — Schemes, challenges & quality factors</div>
+  <div class="st">Government support, obstacles and knowledge</div>
+  <div class="cc" style="margin-bottom:14px">
+    <div class="ct">Scheme awareness & benefit uptake (sec 22)</div><div class="cs">Among all 10,482 respondents</div>
+    <div style="overflow-x:auto;margin-top:8px">
+      <table class="scheme-tbl">
+        <thead><tr><th>Scheme</th><th>Aware</th><th>Registered</th><th>Benefit taken</th><th>Reach</th></tr></thead>
+        <tbody>
+          <tr><td>National Beekeeping Mission</td><td>72%</td><td>48%</td><td>31%</td><td><span class="pill pg2">High</span></td></tr>
+          <tr><td>Sweet Revolution (KVIC)</td><td>61%</td><td>34%</td><td>22%</td><td><span class="pill py2">Medium</span></td></tr>
+          <tr><td>Honey FPO (NAFED)</td><td>44%</td><td>19%</td><td>12%</td><td><span class="pill py2">Medium</span></td></tr>
+          <tr><td>KVK (Krishi Vigyan Kendra)</td><td>55%</td><td>28%</td><td>18%</td><td><span class="pill py2">Medium</span></td></tr>
+          <tr><td>Dev of Bee Breeders</td><td>33%</td><td>11%</td><td>7%</td><td><span class="pill pr2">Low</span></td></tr>
+          <tr><td>MIDH (Horticulture)</td><td>39%</td><td>14%</td><td>9%</td><td><span class="pill pr2">Low</span></td></tr>
+          <tr><td>Sphoorti (MSME)</td><td>28%</td><td>9%</td><td>5%</td><td><span class="pill pr2">Very low</span></td></tr>
+          <tr><td>State Industrial Dev Mission</td><td>24%</td><td>7%</td><td>4%</td><td><span class="pill pr2">Very low</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Horticulture dept help types (sec 23)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Beekeeping boxes</div><div class="bt"><div class="bf fg" style="width:47%">47%</div></div></div>
+        <div class="br"><div class="bl">Branding/grading</div><div class="bt"><div class="bf fa" style="width:28%">28%</div></div></div>
+        <div class="br"><div class="bl">Processing unit</div><div class="bt"><div class="bf fb" style="width:19%">19%</div></div></div>
+        <div class="br"><div class="bl">Other help</div><div class="bt"><div class="bf fp" style="width:14%">14%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Major obstacles faced (sec 25)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Marketing problems</div><div class="bt"><div class="bf fr" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl">High hive costs</div><div class="bt"><div class="bf fr" style="width:41%">41%</div></div></div>
+        <div class="br"><div class="bl">Lack of credit</div><div class="bt"><div class="bf fa" style="width:36%">36%</div></div></div>
+        <div class="br"><div class="bl">Agrochemicals</div><div class="bt"><div class="bf fa" style="width:32%">32%</div></div></div>
+        <div class="br"><div class="bl">Skill gap</div><div class="bt"><div class="bf fb" style="width:28%">28%</div></div></div>
+        <div class="br"><div class="bl">Bee escape</div><div class="bt"><div class="bf fp" style="width:22%">22%</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Factors affecting honey production (sec 26)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Colony loss</div><div class="bt"><div class="bf fr" style="width:62%">62%</div></div></div>
+        <div class="br"><div class="bl w130">Colony migration</div><div class="bt"><div class="bf fa" style="width:41%">41%</div></div></div>
+        <div class="br"><div class="bl w130">Water source dry</div><div class="bt"><div class="bf fb" style="width:27%">27%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Factors affecting honey quality (sec 28)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Flower origin/age</div><div class="bt"><div class="bf fg" style="width:58%">58%</div></div></div>
+        <div class="br"><div class="bl w130">Pollen type</div><div class="bt"><div class="bf fa" style="width:44%">44%</div></div></div>
+        <div class="br"><div class="bl w130">Climate factors</div><div class="bt"><div class="bf fb" style="width:39%">39%</div></div></div>
+        <div class="br"><div class="bl w130">Production params</div><div class="bt"><div class="bf fp" style="width:28%">28%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ POLLINATION ══ -->
+<div id="p-pollination" class="panel">
+  <div class="sh">Section 29 — Pollination services</div>
+  <div class="st">Colonies rented out for pollination purposes</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">31%</div><div class="kl">Provide pollination</div><div class="kt tg">Extra income stream</div></div>
+    <div class="kc"><div class="kn">48</div><div class="kl">Avg colonies rented</div></div>
+    <div class="kc"><div class="kn">₹1,200</div><div class="kl">Avg rental / colony</div></div>
+    <div class="kc"><div class="kn">2</div><div class="kl">Avg crop types served</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Crop type pollinated (sec 29.1)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Fruit crops</div><div class="bt"><div class="bf fg" style="width:54%">54%</div></div></div>
+        <div class="br"><div class="bl">Flower crops</div><div class="bt"><div class="bf fa" style="width:32%">32%</div></div></div>
+        <div class="br"><div class="bl">Other crops</div><div class="bt"><div class="bf fb" style="width:14%">14%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Factors affecting bees (sec 27)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl w130">Mites</div><div class="bt"><div class="bf fr" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl w130">Various viruses</div><div class="bt"><div class="bf fr" style="width:34%">34%</div></div></div>
+        <div class="br"><div class="bl w130">Bacterial infect.</div><div class="bt"><div class="bf fa" style="width:24%">24%</div></div></div>
+        <div class="br"><div class="bl w130">Fungal disease</div><div class="bt"><div class="bf fp" style="width:17%">17%</div></div></div>
+        <div class="br"><div class="bl w130">Multiple pests</div><div class="bt"><div class="bf ft" style="width:11%">11%</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ VARIETY SALES ══ -->
+<div id="p-variety" class="panel">
+  <div class="sh">Section 31 — Variety-wise sales</div>
+  <div class="st">Sales broken down by honey variety</div>
+  <div class="kpi-g">
+    <div class="kc"><div class="kn">68%</div><div class="kl">Report variety-wise sales</div></div>
+    <div class="kc"><div class="kn">2.4</div><div class="kl">Avg varieties sold</div></div>
+    <div class="kc"><div class="kn">5</div><div class="kl">Max variety slots (31.1–31.5)</div></div>
+    <div class="kc"><div class="kn">₹248/kg</div><div class="kl">Highest variety avg price</div><div class="kt tg">Litchi honey</div></div>
+  </div>
+  <div class="g2">
+    <div class="cc"><div class="ct">Volume share by variety (sec 31)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Mustard</div><div class="bt"><div class="bf fa" style="width:48%">48%</div></div></div>
+        <div class="br"><div class="bl">Litchi</div><div class="bt"><div class="bf fg" style="width:22%">22%</div></div></div>
+        <div class="br"><div class="bl">Eucalyptus</div><div class="bt"><div class="bf fb" style="width:14%">14%</div></div></div>
+        <div class="br"><div class="bl">Sunflower</div><div class="bt"><div class="bf fp" style="width:9%">9%</div></div></div>
+        <div class="br"><div class="bl">Mixed / other</div><div class="bt"><div class="bf ft" style="width:7%">7%</div></div></div>
+      </div>
+    </div>
+    <div class="cc"><div class="ct">Average price per variety (Rs/kg)</div>
+      <div class="bars" style="margin-top:10px">
+        <div class="br"><div class="bl">Litchi</div><div class="bt"><div class="bf fg" style="width:99%">₹248</div></div></div>
+        <div class="br"><div class="bl">Eucalyptus</div><div class="bt"><div class="bf fa" style="width:85%">₹214</div></div></div>
+        <div class="br"><div class="bl">Sunflower</div><div class="bt"><div class="bf fb" style="width:80%">₹201</div></div></div>
+        <div class="br"><div class="bl">Mustard</div><div class="bt"><div class="bf fp" style="width:71%">₹179</div></div></div>
+        <div class="br"><div class="bl">Mixed</div><div class="bt"><div class="bf ft" style="width:62%">₹156</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ALL VARIABLES ══ -->
+<div id="p-variables" class="panel">
+  <div class="sh">Complete variable reference — all 31 sections · 450+ fields</div>
+  <div class="st">Search and explore every survey variable</div>
+  <div class="srch-wrap">
+    <i class="ti ti-search" style="font-size:15px;color:#C0B8A8" aria-hidden="true"></i>
+    <input type="text" id="vsrch" placeholder="Search by variable name, question text, or section…" oninput="fv(this.value)">
+    <span id="vc" style="font-size:11px;color:#A8A8A8;white-space:nowrap"></span>
+  </div>
+  <div class="var-tbl-wrap">
+    <div class="var-scroll">
+      <table class="var-tbl">
+        <thead><tr><th>S.No</th><th>Variable</th><th>Question</th><th>Type</th><th>Section</th></tr></thead>
+        <tbody id="vb"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="ic" style="margin-top:10px">
+    <div class="ip ig">Total: <b>450+ variables</b></div>
+    <div class="ip iy">Sections: <b>31</b></div>
+    <div class="ip ib">Calculated fields: <b>24</b></div>
+    <div class="ip2 ip">Branching logic: <b>180+ fields</b></div>
+  </div>
+</div>
+
+</div><!-- end .hd -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+function sw(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+
+new Chart(document.getElementById('trendC'),{
+  type:'line',
+  data:{
+    labels:['Q1\'21','Q2','Q3','Q4','Q1\'22','Q2','Q3','Q4','Q1\'23','Q2','Q3','Q4'],
+    datasets:[{label:'Output (T)',data:[14200,15800,13900,16100,15900,17200,16800,18100,18400,19200,18800,20100],borderColor:'#F2A900',backgroundColor:'rgba(246,196,83,0.1)',borderWidth:2,pointBackgroundColor:'#F2A900',pointRadius:3,fill:true,tension:.4}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(240,230,214,.5)'},ticks:{font:{size:9},color:'#A8A8A8',maxRotation:0}},y:{grid:{color:'rgba(240,230,214,.5)'},ticks:{font:{size:9},color:'#A8A8A8',callback:v=>Math.round(v/1000)+'k'},min:12000,max:22000}}}
+});
+
+new Chart(document.getElementById('cpChart'),{
+  type:'bar',
+  data:{
+    labels:['Beeswax','Pollen','Propolis','Royal Jelly','Venom'],
+    datasets:[
+      {label:'2021',data:[38,16,9,6,2],backgroundColor:'rgba(242,169,0,.5)'},
+      {label:'2022',data:[40,18,11,7,3],backgroundColor:'rgba(111,191,115,.6)'},
+      {label:'2023',data:[41,19,12,8,3],backgroundColor:'rgba(25,118,210,.5)'}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{font:{size:10},boxWidth:10}}},scales:{x:{grid:{display:false},ticks:{font:{size:10},color:'#6B6B6B'}},y:{grid:{color:'rgba(240,230,214,.5)'},ticks:{font:{size:9},color:'#A8A8A8',callback:v=>v+'%'}}}}
+});
+
+const VARS=[
+  ['1.1','bkproducer_name','Name of beekeeping producer','Text','1 — Producer info'],
+  ['1.2','bkproducer_phone','Mobile number','Text','1 — Producer info'],
+  ['1.3','registration_onnbb','Registration on NBB','Select','1 — Producer info'],
+  ['1.4','bkproducer_district','District','Global select','1 — Producer info'],
+  ['1.5','bkproducer_block','Block','Global select','1 — Producer info'],
+  ['1.6','bkproducer_village','Village','Text','1 — Producer info'],
+  ['1.7','bkproducer_age','Age (0–99)','Integer','1 — Producer info'],
+  ['1.8','bkproducer_gender','Gender','Select','1 — Producer info'],
+  ['1.9','bkproducer_religion','Religion','Select','1 — Producer info'],
+  ['1.10','bkproducer_caste','Caste','Select','1 — Producer info'],
+  ['1.11','bkproducer_edu_level','Educational level','Select','1 — Producer info'],
+  ['1.12','bkproducer_marital_status','Marital status','Select','1 — Producer info'],
+  ['1.13.1','total_male','Total male members in family','Integer','1 — Family demo'],
+  ['1.13.2','total_female','Total female members in family','Integer','1 — Family demo'],
+  ['1.13.3','total_children','Total children in family','Integer','1 — Family demo'],
+  ['1.14.1','total_male_labor','Men working in beekeeping','Integer','1 — Family demo'],
+  ['1.14.2','total_female_labor','Women working in beekeeping','Integer','1 — Family demo'],
+  ['1.14.3','total_children_labor','Children working in beekeeping','Integer','1 — Family demo'],
+  ['1.14','main_occupation','Main occupation','Select','1 — Family demo'],
+  ['2','landusedetails','Land use details (yes/no)','Select','2 — Land use'],
+  ['2.A','landusedetails_ownland','Own land (yes/no)','Radio','2 — Land use'],
+  ['2.A.1','own_land_area','Own land area (bigha)','Integer','2 — Land use'],
+  ['2.A.2','own_land_irrigated','Own land irrigated (bigha)','Integer','2 — Land use'],
+  ['2.A.3','own_land_non_irrigated','Own land non-irrigated','Integer','2 — Land use'],
+  ['2.A.4','own_land_irrigation_source','Source of irrigation','Select','2 — Land use'],
+  ['2.B','landusedetails_leasedout','Leased out (yes/no)','Radio','2 — Land use'],
+  ['2.B.1','leased_out_area','Leased out area (bigha)','Integer','2 — Land use'],
+  ['2.C','landusedetails_leasedin','Leased in (yes/no)','Radio','2 — Land use'],
+  ['2.C.1','leased_in_area','Leased in area (bigha)','Integer','2 — Land use'],
+  ['2.D','landusedetails_fallow','Fallow / wasteland (yes/no)','Radio','2 — Land use'],
+  ['2.D.1','fallow_wasteland_area','Fallow wasteland area (bigha)','Integer','2 — Land use'],
+  ['2.1.1','leased_out_rent','Land rent received (Rs)','Integer','2 — Land lease'],
+  ['2.2.1','leased_in_rent','Land rent paid (Rs)','Integer','2 — Land lease'],
+  ['2.3.1','acre_in_biga','Total bighas in one acre','Integer','2 — Land lease'],
+  ['3','beekeeping_start_year','Year started beekeeping','Integer','3 — Colony info'],
+  ['3.1','colonies_number','Number of colonies','Integer','3 — Colony info'],
+  ['3.2','beheives_in_box','Hives per box','Integer','3 — Colony info'],
+  ['3.3','colonies_cost','Colony purchase source','Text','3 — Colony info'],
+  ['3.4','cost_per_colonies','Cost per colony (Rs)','Text','3 — Colony info'],
+  ['4','start_medium','How beekeeping was started','Checkbox','4 — Start method'],
+  ['4.1','other_medium','Any other start method','Text','4 — Start method'],
+  ['5','colonies_total_cost','Total colony cost (calculated)','Calculated','5 — Colony cost'],
+  ['6.1','source_beecol_traditional','Traditional colonies (yes/no)','Radio','6 — Colony source'],
+  ['6.1.1','traditional_number','Traditional colony count','Integer','6 — Colony source'],
+  ['6.1.2','traditional_value','Traditional colony value/unit','Integer','6 — Colony source'],
+  ['6.1.3','traditional_source','Traditional colony source','Select','6 — Colony source'],
+  ['6.2','source_beecol_transitional','Transitional colonies (yes/no)','Radio','6 — Colony source'],
+  ['6.2.1','transitional_number','Transitional colony count','Integer','6 — Colony source'],
+  ['6.2.2','transitional_value','Transitional colony value/unit','Integer','6 — Colony source'],
+  ['6.3','source_beecol_modern','Modern colonies (yes/no)','Radio','6 — Colony source'],
+  ['6.3.1','modern_number','Modern colony count','Integer','6 — Colony source'],
+  ['6.3.2','modern_value','Modern colony value/unit','Integer','6 — Colony source'],
+  ['7','beekeeping_type','Beekeeping type (hobby/part/full)','Select','7 — Operations'],
+  ['7.1','beekeeping_migration','Migrate colonies? (yes/no)','Radio','7 — Operations'],
+  ['7.1.1','beekeeping_migration_number','Migration frequency per year','Text','7 — Operations'],
+  ['7.2','honey_qualtity_per_box','Honey per box per cycle (kg)','Text','7 — Operations'],
+  ['8.1','sr1_bee_varieties','Bee varieties produced (yes/no)','Radio','8 — Production'],
+  ['8.1.1','sr1_bee_varities_name','Variety names','Checkbox','8 — Production'],
+  ['8.1.2','sr1_product_honey','Produces honey (yes/no)','Radio','8 — Production'],
+  ['8.1.2.1','sr1_honey_qty','Honey quantity (kg)','Integer','8 — Production'],
+  ['8.1.2.2','sr1_honey_price','Honey price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.2.3','sr1_honey_productivity','Honey productivity kg/colony','Calculated','8 — Production'],
+  ['8.1.2.4','sr1_honey_productivity_under15kg_reason','Reason if under 15 kg/colony','Text','8 — Production'],
+  ['8.1.2.5','sr1_honey_revenue','Total honey revenue (Rs)','Calculated','8 — Production'],
+  ['8.1.3','sr1_product_beeswax','Produces beeswax (yes/no)','Radio','8 — Production'],
+  ['8.1.3.1','sr1_beeswax_qty','Beeswax quantity (kg)','Integer','8 — Production'],
+  ['8.1.3.2','sr1_beeswax_price','Beeswax price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.4','sr1_product_pollen','Produces pollen (yes/no)','Radio','8 — Production'],
+  ['8.1.4.1','sr1_pollen_qty','Pollen quantity (kg)','Integer','8 — Production'],
+  ['8.1.4.2','sr1_pollen_price','Pollen price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.5','sr1_product_royaljelly','Produces royal jelly (yes/no)','Radio','8 — Production'],
+  ['8.1.5.1','sr1_royaljelly_qty','Royal jelly quantity (kg)','Integer','8 — Production'],
+  ['8.1.5.2','sr1_royaljelly_price','Royal jelly price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.6','sr1_product_propolis','Produces propolis (yes/no)','Radio','8 — Production'],
+  ['8.1.6.1','sr1_propolis_qty','Propolis quantity (kg)','Integer','8 — Production'],
+  ['8.1.6.2','sr1_propolis_price','Propolis price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.7','sr1_product_venom','Produces venom (yes/no)','Radio','8 — Production'],
+  ['8.1.7.1','sr1_venom_qty','Venom quantity (kg)','Integer','8 — Production'],
+  ['8.1.7.2','sr1_venom_price','Venom price (Rs/kg)','Integer','8 — Production'],
+  ['8.1.8','sr1_product_rowbyproduct','Total raw by-product (yes/no)','Radio','8 — Production'],
+  ['8.1.9','sr1_beebox_numbers','Total increase in bee box numbers','Integer','8 — Production'],
+  ['9.1.2','sr1fc_beehive_box_number','Fixed cost — beehive box count','Integer','9 — Cost'],
+  ['9.1.3','sr1fc_per_box_cost','Fixed cost — box cost per box (Rs)','Integer','9 — Cost'],
+  ['9.1.4','sr1fc_own_capital','Fixed cost — own capital (Rs)','Integer','9 — Cost'],
+  ['9.1.5','sr1fc_borrowed_capital','Fixed cost — borrowed capital (Rs)','Integer','9 — Cost'],
+  ['9.1.6','sr1fc_borrowed_capital_intrest','Interest on borrowed capital (Rs)','Integer','9 — Cost'],
+  ['9.1.7','sr1vc_labour_number','Variable — unskilled labour count','Integer','9 — Cost'],
+  ['9.1.8','sr1vc_worker_day_number','Variable — unskilled worker days','Integer','9 — Cost'],
+  ['9.1.9','sr1vc_per_worker_wage','Variable — wage per worker (Rs/day)','Integer','9 — Cost'],
+  ['9.1.10','sr1vc_total_unskilled_labour_cost','Total unskilled labour cost','Calculated','9 — Cost'],
+  ['9.1.11','sr1vc_skilledlabour_number','Variable — skilled labour count','Integer','9 — Cost'],
+  ['9.1.12','sr1vc_per_worker_skilledwage','Wage per skilled worker (Rs/day)','Integer','9 — Cost'],
+  ['9.1.14','sr1vc_total_skilled_labour_cost','Total skilled labour cost','Calculated','9 — Cost'],
+  ['9.1.15','sr1vc_family_labour_day_number','Variable — family labour days','Integer','9 — Cost'],
+  ['9.1.16','sr1vc_raw_material','Variable — raw material (Rs)','Integer','9 — Cost'],
+  ['9.1.17','sr1vc_sugar_price','Variable — sugar cost (Rs)','Integer','9 — Cost'],
+  ['9.1.18','sr1vc_pest_management_cost','Variable — pest mgmt cost (Rs)','Integer','9 — Cost'],
+  ['9.1.19','sr1vc_water_cost','Variable — water cost (Rs)','Integer','9 — Cost'],
+  ['9.1.20','sr1vc_electricity_cost','Variable — electricity cost (Rs)','Integer','9 — Cost'],
+  ['9.1.21','sr1vc_picking_cost','Variable — picking cost (Rs)','Integer','9 — Cost'],
+  ['9.1.22','sr1vc_packing_cost','Variable — packing cost (Rs)','Integer','9 — Cost'],
+  ['9.1.23','sr1vc_transportation_cost','Variable — transport cost (Rs)','Integer','9 — Cost'],
+  ['9.1.24','sr1vc_miscellaneous_expenses','Variable — miscellaneous (Rs)','Integer','9 — Cost'],
+  ['9.1.25','sr1vc_total_of_variable_costs','Total variable cost (Rs)','Calculated','9 — Cost'],
+  ['9.1.26','sr1vc_profit','Profit (Rs)','Calculated','9 — Cost'],
+  ['10.1','preloss1_beekeeping_production','Has production loss? (yes/no)','Radio','10 — Losses'],
+  ['10.1.1','sr1_pree_loss_ncpl','Natural calamity types','Checkbox','10 — Losses'],
+  ['10.1.1.1','sr1_pree_loss_ncpl_count','Natural calamity loss qty (kg)','Text','10 — Losses'],
+  ['10.1.2','sr1_pree_loss_dppl','Disease & pest types','Checkbox','10 — Losses'],
+  ['10.1.2.1','sr1_pree_loss_dppl_count','Disease & pest loss qty (kg)','Text','10 — Losses'],
+  ['10.1.3','sr1_pree_loss_swapl','Wild animal loss (kg)','Text','10 — Losses'],
+  ['10.1.4','sr1_pree_loss_secmpl','Chemical side-effect loss (kg)','Text','10 — Losses'],
+  ['10.1.5','sr1_pree_loss_total','Total pre-loss (kg)','Calculated','10 — Losses'],
+  ['10.1.6','sr1_loss_after_wbpla','Post-harvest packaging loss (kg)','Text','10 — Losses'],
+  ['10.1.7','sr1_loss_after_tla','Transport loss (kg)','Text','10 — Losses'],
+  ['10.1.8','sr1_loss_after_cpusla','Crystallisation loss (kg)','Text','10 — Losses'],
+  ['10.1.9','sr1_loss_after_dbla','Beehive destruction loss (kg)','Text','10 — Losses'],
+  ['10.1.10','sr1_loss_after_rla','Reasons for post-harvest loss','Text','10 — Losses'],
+  ['10.1.11','sr1_loss_after_total','Total post-harvest loss (kg)','Calculated','10 — Losses'],
+  ['10.1.12','sr1_aggregate_loss_total','Aggregate total loss (kg)','Calculated','10 — Losses'],
+  ['11','is_empty_box','Empty beehives in boxes? (yes/no)','Radio','11 — Empty boxes'],
+  ['11.1','empty_box_number','Number of empty beehives','Text','11 — Empty boxes'],
+  ['12','is_adopt_protection','Adopt protection & pest mgmt?','Select','12 — Protection'],
+  ['12.1','adopt_protection_type','Type of protection adopted','Select','12 — Protection'],
+  ['12.2','other_type_adopt_protection','Other protection type','Text','12 — Protection'],
+  ['13.1','2021_selling_detail','2021 selling details (yes/no)','Radio','13 — Sales 2021'],
+  ['13.1.1','2021_total_output','2021 total output (kg)','Text','13 — Sales 2021'],
+  ['13.1.2','2021_local_qty','2021 local shop qty %','Text','13 — Sales 2021'],
+  ['13.1.3','2021_local_price','2021 local shop price (Rs/kg)','Text','13 — Sales 2021'],
+  ['13.1.4','2021_local_dist','2021 local shop distance (km)','Text','13 — Sales 2021'],
+  ['13.1.5','2021_fair_qty','2021 fair/exhibition qty %','Text','13 — Sales 2021'],
+  ['13.1.6','2021_fair_price','2021 fair price (Rs/kg)','Text','13 — Sales 2021'],
+  ['13.1.8','2021_consumer_qty','2021 consumer direct qty %','Text','13 — Sales 2021'],
+  ['13.1.9','2021_consumer_price','2021 consumer price (Rs/kg)','Text','13 — Sales 2021'],
+  ['13.1.11','2021_private_qty','2021 private retailer qty','Text','13 — Sales 2021'],
+  ['13.1.12','2021_private_price','2021 private retailer price','Text','13 — Sales 2021'],
+  ['13.1.14','2021_honey_qty','2021 processing unit qty','Text','13 — Sales 2021'],
+  ['13.1.15','2021_honey_price','2021 processing unit price','Text','13 — Sales 2021'],
+  ['13.1.17','2021_honey_name','2021 processing unit name','Select','13 — Sales 2021'],
+  ['13.1.19','2021_total_percentage_sell','2021 total % sell (calculated)','Calculated','13 — Sales 2021'],
+  ['13.3','2022_selling_detail','2022 selling details (yes/no)','Radio','13 — Sales 2022'],
+  ['13.3.1','2022_total_output','2022 total output (kg)','Text','13 — Sales 2022'],
+  ['13.3.2','2022_local_qty','2022 local shop qty %','Text','13 — Sales 2022'],
+  ['13.3.3','2022_local_price','2022 local shop price','Text','13 — Sales 2022'],
+  ['13.3.17','2022_honey_name','2022 processing unit name','Select','13 — Sales 2022'],
+  ['13.3.19','2022_total_percentage_sell','2022 total % sell (calculated)','Calculated','13 — Sales 2022'],
+  ['13.5','2023_selling_detail','2023 selling details (yes/no)','Radio','13 — Sales 2023'],
+  ['13.5.1','2023_total_output','2023 total output (kg)','Text','13 — Sales 2023'],
+  ['13.5.2','2023_local_qty','2023 local shop qty %','Text','13 — Sales 2023'],
+  ['13.5.3','2023_local_price','2023 local shop price','Text','13 — Sales 2023'],
+  ['13.5.17','2023_honey_name','2023 processing unit name','Select','13 — Sales 2023'],
+  ['13.5.19','2023_total_percentage_sell','2023 total % sell (calculated)','Calculated','13 — Sales 2023'],
+  ['14.1','beeswax_coproduct21','2021 beeswax co-product','Select','14 — Co-products 2021'],
+  ['14.1.1','beeswax_coproduct_totalcost21','2021 beeswax total cost (Rs)','Integer','14 — Co-products 2021'],
+  ['14.1.2','beeswax_local_qty21','2021 beeswax local shop qty %','Integer','14 — Co-products 2021'],
+  ['14.1.17','beeswax_honey_unitname21','2021 beeswax processing unit name','Select','14 — Co-products 2021'],
+  ['14.2','pollen_coproduct21','2021 pollen co-product','Select','14 — Co-products 2021'],
+  ['14.3','royal_coproduct21','2021 royal jelly co-product','Select','14 — Co-products 2021'],
+  ['14.4','propolis_coproduct21','2021 propolis co-product','Select','14 — Co-products 2021'],
+  ['14.5','venom_coproduct21','2021 venom co-product','Select','14 — Co-products 2021'],
+  ['14.1','beeswax_coproduct22','2022 beeswax co-product','Select','14 — Co-products 2022'],
+  ['14.2','pollen_coproduct22','2022 pollen co-product','Select','14 — Co-products 2022'],
+  ['14.3','royal_coproduct22','2022 royal jelly co-product','Select','14 — Co-products 2022'],
+  ['14.4','propolis_coproduct22','2022 propolis co-product','Select','14 — Co-products 2022'],
+  ['14.5','venom_coproduct22','2022 venom co-product','Select','14 — Co-products 2022'],
+  ['14.1','beeswax_coproduct23','2023 beeswax co-product','Select','14 — Co-products 2023'],
+  ['14.2','pollen_coproduct23','2023 pollen co-product','Select','14 — Co-products 2023'],
+  ['14.3','royal_coproduct23','2023 royal jelly co-product','Select','14 — Co-products 2023'],
+  ['14.4','propolis_coproduct23','2023 propolis co-product','Select','14 — Co-products 2023'],
+  ['14.5','venom_coproduct23','2023 venom co-product','Select','14 — Co-products 2023'],
+  ['15','is_under_harvest_grading','Post-harvest grading? (yes/no)','Select','15 — Branding'],
+  ['15.1','manual_grading','Manual grading (yes/no)','Select','15 — Branding'],
+  ['15.2','machine_grading','Machine grading (yes/no)','Select','15 — Branding'],
+  ['15.3','branding1','Branding I (yes/no)','Select','15 — Branding'],
+  ['15.3.1','branding1_type_of_brand','Brand I honey type','Select','15 — Branding'],
+  ['15.3.2','branding1_varieties_kg','Brand I variety kg','Integer','15 — Branding'],
+  ['15.3.3','branding1_varieties_price','Brand I variety price/unit','Integer','15 — Branding'],
+  ['15.3.4','branding1_weight250_confirm','Brand I — 250g pack','Select','15 — Branding'],
+  ['15.3.5','branding1_weight500_confirm','Brand I — 500g pack','Select','15 — Branding'],
+  ['15.3.6','branding1_weight1000_confirm','Brand I — 1 kg pack','Select','15 — Branding'],
+  ['15.3.7','branding1_colyellow_number','Brand I — yellow colour count','Text','15 — Branding'],
+  ['15.3.9','branding1_colrbrown_number','Brand I — reddish brown count','Text','15 — Branding'],
+  ['15.3.11','branding1_coldbrown_number','Brand I — dark brown count','Text','15 — Branding'],
+  ['15.4','branding2','Branding II (yes/no)','Select','15 — Branding'],
+  ['15.5','branding3','Branding III (yes/no)','Select','15 — Branding'],
+  ['16','is_taken_training','Received any training? (yes/no)','Select','16 — Training'],
+  ['16.1','activities_related_beekeeping','Pre-beekeeping training (yes/no)','Select','16 — Training'],
+  ['16.1.1','pre_beekeeping_traning_name','Pre-beekeeping training name','Select','16 — Training'],
+  ['16.1.2','pre_beekeeping_traning_provider','Training provider name','Text','16 — Training'],
+  ['16.1.3','pre_beekeeping_traning_year','Training year','Integer','16 — Training'],
+  ['16.1.4','pre_beekeeping_traning_days','Training days','Integer','16 — Training'],
+  ['16.1.5','pre_beekeeping_traning_type','Training type (formal/informal)','Text','16 — Training'],
+  ['16.2','during_beekeeping_activities','During-activity training (yes/no)','Select','16 — Training'],
+  ['16.2.1','during_beekeeping_traning_name','During-activity training name','Select','16 — Training'],
+  ['16.2.2','during_beekeeping_traning_provider','Training provider','Text','16 — Training'],
+  ['16.3','post_harvest_activities','Post-harvest training (yes/no)','Select','16 — Training'],
+  ['16.3.1','post_harvest_traning_name','Post-harvest training name','Select','16 — Training'],
+  ['16.4','other_activities','Other training (yes/no)','Select','16 — Training'],
+  ['17','is_self_oprate_processing_unit','Operates processing unit?','Select','17 — Processing'],
+  ['17.1','self_oprate_processing_unit_name','Processing unit name','Text','17 — Processing'],
+  ['17.2','unit_establishment_year','Unit establishment year','Text','17 — Processing'],
+  ['17.3','related_type_honey','Honey varieties processed','Text','17 — Processing'],
+  ['17.4','honey_quantity','Processing capacity (kg)','Integer','17 — Processing'],
+  ['17.5','processed_honey_quantity','Processed quantity (kg)','Integer','17 — Processing'],
+  ['17.6','production_price','Processing cost (Rs/kg)','Text','17 — Processing'],
+  ['17.1.4.1','village_market','Village market / haat (yes/no)','Radio','17 — Processing sale'],
+  ['17.1.4.2','govt_market','Government market (yes/no)','Radio','17 — Processing sale'],
+  ['17.1.4.3','enam_portal','eNAM portal (yes/no)','Radio','17 — Processing sale'],
+  ['17.1.4.4','local_agent','Local agent (yes/no)','Radio','17 — Processing sale'],
+  ['17.1.4.5','private_company','Private company (yes/no)','Radio','17 — Processing sale'],
+  ['17.1.4.5.1','private_company_listing','Private company name','Select','17 — Processing sale'],
+  ['18.1.1','total_cost','Total processing cost tier','Select','18 — Processing cost'],
+  ['19','is_exporting_product','Exporting produce? (yes/no)','Radio','19 — Export'],
+  ['19.1.1','within_state_p1','Within-state export (yes/no)','Radio','19 — Export'],
+  ['19.1.1.1','within_state_p1_district','Districts exported to','Text','19 — Export'],
+  ['19.1.1.2','within_state_p1_unitkg','Within-state units (kg)','Integer','19 — Export'],
+  ['19.1.1.3','within_state_p1_revenuers','Within-state revenue (Rs)','Integer','19 — Export'],
+  ['19.1.1.4','within_state_p1_byself','By self (yes/no)','Select','19 — Export'],
+  ['19.1.1.5','within_state_is_agency','By agency (yes/no)','Radio','19 — Export'],
+  ['19.2.1','interstate_p1','Interstate export (yes/no)','Radio','19 — Export'],
+  ['19.2.1.1','interstate_p1_state','States exported to','Text','19 — Export'],
+  ['19.2.1.2','interstate_p1_unitkg','Interstate units (kg)','Integer','19 — Export'],
+  ['19.2.1.3','interstate_p1_revenuers','Interstate revenue (Rs)','Integer','19 — Export'],
+  ['19.3.1','outof_country_p1','International export (yes/no)','Radio','19 — Export'],
+  ['19.3.1.1','outof_country_p1_country','Countries exported to','Text','19 — Export'],
+  ['19.3.1.2','outof_country_p1_unitkg','International units (kg)','Integer','19 — Export'],
+  ['19.3.1.3','outof_country_p1_revenuers','International revenue (Rs)','Integer','19 — Export'],
+  ['20','isco_beeswax_products','Export beeswax co-product?','Radio','20 — Co-product export'],
+  ['20.1.1','within_state_bw1','Beeswax within-state export','Radio','20 — Co-product export'],
+  ['20.1.2.1','interstate_bw1','Beeswax interstate export','Radio','20 — Co-product export'],
+  ['20.1.3.1','outof_country_bw1','Beeswax international export','Radio','20 — Co-product export'],
+  ['21','market_competition','Market competition type','Select','21 — Market'],
+  ['21.1','market_competition_other','Market competition — other','Text','21 — Market'],
+  ['22','beekeeping_technology','Aware of govt schemes?','Select','22 — Schemes'],
+  ['22.1','national_beekeeping_mission','National Beekeeping Mission','Select','22 — Schemes'],
+  ['22.1.1','nbm_famillar','NBM — familiar?','Select','22 — Schemes'],
+  ['22.1.2','nbm_registered','NBM — registered?','Select','22 — Schemes'],
+  ['22.1.3','nbm_availed_benefit','NBM — benefit availed?','Text','22 — Schemes'],
+  ['22.2','sweet_revolution_kvic','Sweet Revolution (KVIC)','Select','22 — Schemes'],
+  ['22.2.1','srkvic_famillar','KVIC — familiar?','Select','22 — Schemes'],
+  ['22.2.2','srkvic_registered','KVIC — registered?','Select','22 — Schemes'],
+  ['22.3','development_bee_breeders','Development of bee breeders','Select','22 — Schemes'],
+  ['22.4','honeyfarmer_producer_organization','Honey FPO (NAFED)','Select','22 — Schemes'],
+  ['22.4.1','fpo_famillar','FPO — familiar?','Select','22 — Schemes'],
+  ['22.4.2','fpo_registered','FPO — registered?','Select','22 — Schemes'],
+  ['22.5','krishi_vigyan_kendra','Krishi Vigyan Kendra (KVK)','Select','22 — Schemes'],
+  ['22.6','mission_integrated_development','MIDH (horticulture)','Select','22 — Schemes'],
+  ['22.7','industrial_development_mission','State Industrial Dev Mission','Select','22 — Schemes'],
+  ['22.8','district_development_mission','District Industrial Dev Mission','Select','22 — Schemes'],
+  ['22.9','sphoorti_msme','Sphoorti (MSME)','Select','22 — Schemes'],
+  ['22.10','other_scheme','Other scheme (yes/no)','Select','22 — Schemes'],
+  ['23','beekeeping_help_horticulture_department','Horticulture dept help?','Select','23 — Dept help'],
+  ['23.1','beekeeping_boxes','Help — beekeeping boxes','Select','23 — Dept help'],
+  ['23.1.1','bb_help_year','Boxes help — year','Integer','23 — Dept help'],
+  ['23.1.2','bb_help_scheme_name','Boxes help — scheme name','Select','23 — Dept help'],
+  ['23.1.3','bb_help_dbt_cash','Boxes help — DBT cash (Rs)','Integer','23 — Dept help'],
+  ['23.2','honeyprocessing_branding','Help — branding/grading/packing','Select','23 — Dept help'],
+  ['23.3','operation_honey_processing','Help — processing unit ops','Select','23 — Dept help'],
+  ['23.4','other_help','Other help (yes/no)','Select','23 — Dept help'],
+  ['24','membership_information','Govt institution member?','Select','24 — Membership'],
+  ['24.1.1','sr1_member_institution_name','Membership 1 institution name','Text','24 — Membership'],
+  ['24.1.2','sr1_member_institution_received_benefit','Membership 1 benefits','Text','24 — Membership'],
+  ['24.2.1','sr2_member_institution_name','Membership 2 institution name','Text','24 — Membership'],
+  ['24.3.1','sr3_member_institution_name','Membership 3 institution name','Text','24 — Membership'],
+  ['25','beekeeping_major_obstacles','Major obstacles in beekeeping','Select','25 — Challenges'],
+  ['25.1','beekeeping_major_obstacles_other','Major obstacles — other','Text','25 — Challenges'],
+  ['26','honey_affecting_factors','Factors affecting honey production','Select','26 — Prod factors'],
+  ['26.1','honey_affecting_factors_other','Production factors — other','Text','26 — Prod factors'],
+  ['27','bee_affecting_factors','Factors affecting bees','Select','27 — Bee factors'],
+  ['27.1','bee_affecting_factors_other','Bee factors — other','Text','27 — Bee factors'],
+  ['28','honey_determine_quality_factors','Factors determining honey quality','Select','28 — Quality factors'],
+  ['28.1','honey_determine_quality_factors_other','Quality factors — other','Text','28 — Quality factors'],
+  ['29.1','rental_confirm','Pollination rental data? (yes/no)','Radio','29 — Pollination'],
+  ['29.1.1','flowers1_confirm','Pollination record 1 (yes/no)','Radio','29 — Pollination'],
+  ['29.1.1.1','sr1_flowers_crop_name','Crop pollinated name','Text','29 — Pollination'],
+  ['29.1.1.2','sr1_flowers_colonies_number','Colonies for pollination','Integer','29 — Pollination'],
+  ['29.1.1.3','sr1_flowers_average_price_per_colony','Avg rental price / colony','Text','29 — Pollination'],
+  ['29.1.2','flowers2_confirm','Pollination record 2 (yes/no)','Radio','29 — Pollination'],
+  ['29.1.2.1','sr2_flowers_crop_name','Crop 2 pollinated name','Text','29 — Pollination'],
+  ['29.1.2.2','sr2_flowers_colonies_number','Crop 2 colonies for pollination','Integer','29 — Pollination'],
+  ['30','beekeeping_contract','Under contract? (yes/no)','Radio','30 — Contract'],
+  ['30.1','type_of_contract','Contract type (oral/written)','Select','30 — Contract'],
+  ['30.2','name_of_contract','Firm / contractor name','Select','30 — Contract'],
+  ['30.2.1','name_of_contract_other','Contractor name — other','Text','30 — Contract'],
+  ['30.3','parameters_of_contract','Contract parameters','Select','30 — Contract'],
+  ['30.3.1','parameters_of_contract_other','Contract parameters — other','Text','30 — Contract'],
+  ['30.4','benefits_contract_confirm','Benefits after contract? (yes/no)','Radio','30 — Contract'],
+  ['30.5','type_of_benefits','Type of contract benefits','Select','30 — Contract'],
+  ['30.5.1','type_of_benefits_other','Contract benefits — other','Text','30 — Contract'],
+  ['31','is_sales_variety_wise','Variety-wise sales? (yes/no)','Radio','31 — Variety sales'],
+  ['31.1.0','vari1_name','Variety 1 name','Text','31 — Variety sales'],
+  ['31.1.1','vari1_qty','Variety 1 quantity (kg)','Integer','31 — Variety sales'],
+  ['31.1.2','vari1_rate','Variety 1 rate (Rs/kg)','Integer','31 — Variety sales'],
+  ['31.2.0','vari2_name','Variety 2 name','Text','31 — Variety sales'],
+  ['31.2.1','vari2_qty','Variety 2 quantity (kg)','Integer','31 — Variety sales'],
+  ['31.2.2','vari2_rate','Variety 2 rate (Rs/kg)','Integer','31 — Variety sales'],
+  ['31.3.0','vari3_name','Variety 3 name','Text','31 — Variety sales'],
+  ['31.3.1','vari3_qty','Variety 3 quantity (kg)','Integer','31 — Variety sales'],
+  ['31.3.2','vari3_rate','Variety 3 rate (Rs/kg)','Integer','31 — Variety sales'],
+  ['31.4.0','vari4_name','Variety 4 name','Text','31 — Variety sales'],
+  ['31.4.1','vari4_qty','Variety 4 quantity (kg)','Integer','31 — Variety sales'],
+  ['31.4.2','vari4_rate','Variety 4 rate (Rs/kg)','Integer','31 — Variety sales'],
+  ['31.5.0','vari5_name','Variety 5 name','Text','31 — Variety sales'],
+  ['31.5.1','vari5_qty','Variety 5 quantity (kg)','Integer','31 — Variety sales'],
+  ['31.5.2','vari5_rate','Variety 5 rate (Rs/kg)','Integer','31 — Variety sales'],
+];
+
+const SC={'1 — Producer info':'py2','1 — Family demo':'py2','2 — Land use':'pg2','2 — Land lease':'pg2','3 — Colony info':'pt2','4 — Start method':'pt2','5 — Colony cost':'pt2','6 — Colony source':'pt2','7 — Operations':'pb2','8 — Production':'py2','9 — Cost':'pb2','10 — Losses':'pr2','11 — Empty boxes':'pr2','12 — Protection':'pb2','13 — Sales 2021':'pg2','13 — Sales 2022':'pg2','13 — Sales 2023':'pg2','14 — Co-products 2021':'pt2','14 — Co-products 2022':'pt2','14 — Co-products 2023':'pt2','15 — Branding':'pp2','16 — Training':'pg2','17 — Processing':'pb2','17 — Processing sale':'pb2','18 — Processing cost':'pb2','19 — Export':'pp2','20 — Co-product export':'pp2','21 — Market':'py2','22 — Schemes':'pg2','23 — Dept help':'pg2','24 — Membership':'pt2','25 — Challenges':'pr2','26 — Prod factors':'pr2','27 — Bee factors':'pr2','28 — Quality factors':'py2','29 — Pollination':'pg2','30 — Contract':'pp2','31 — Variety sales':'py2'};
+const TC={'Text':'pb2','Integer':'pg2','Select':'py2','Radio':'py2','Checkbox':'pp2','Calculated':'pr2','Global select':'pt2'};
+
+function renderVars(list){
+  document.getElementById('vc').textContent=list.length+' / '+VARS.length+' variables';
+  document.getElementById('vb').innerHTML=list.map(r=>`<tr>
+    <td><span class="pill py2">${r[0]}</span></td>
+    <td style="font-family:monospace;font-size:11px;color:#8B6200">${r[1]}</td>
+    <td>${r[2]}</td>
+    <td><span class="pill ${TC[r[3]]||'py2'}">${r[3]}</span></td>
+    <td><span class="pill ${SC[r[4]]||'py2'}">${r[4]}</span></td>
+  </tr>`).join('');
+}
+function fv(q){
+  const lq=q.trim().toLowerCase();
+  renderVars(lq?VARS.filter(r=>r.join(' ').toLowerCase().includes(lq)):VARS);
+}
+renderVars(VARS);
+</script>

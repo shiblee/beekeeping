@@ -1,0 +1,22 @@
+{
+  "total_beekeepers": 10482,
+  "total_honey_tonnes": 48300,
+  "avg_income_inr": 72600,
+  "active_colonies": 2400000,
+  "districts_covered": 75,
+  "avg_loss_rate_pct": 14.2,
+  "avg_honey_price_2023": 212,
+  "profit_margin_pct": 57,
+  "honey_trend": {
+    "labels": ["Q1'21","Q2","Q3","Q4","Q1'22","Q2","Q3","Q4","Q1'23","Q2","Q3","Q4"],
+    "values": [14200,15800,13900,16100,15900,17200,16800,18100,18400,19200,18800,20100]
+  },
+  "top_districts": [
+    {"name":"Varanasi","colonies":92000},
+    {"name":"Lucknow","colonies":84000},
+    {"name":"Prayagraj","colonies":76000},
+    {"name":"Gorakhpur","colonies":71000},
+    {"name":"Agra","colonies":64000},
+    {"name":"Meerut","colonies":58000}
+  ]
+}
