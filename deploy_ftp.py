@@ -30,11 +30,6 @@ try:
     ftp.login(FTP_USER, FTP_PASS)
     print("Logged in. Starting upload...")
     
-    # Upload beekeeping.sql separately
-    print("Uploading beekeeping.sql...")
-    with open('beekeeping.sql', 'rb') as f:
-        ftp.storbinary('STOR beekeeping.sql', f)
-        
     upload_dir(ftp, '.', '/')
     
     ftp.quit()

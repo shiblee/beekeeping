@@ -1,7 +1,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 .hd{background:#FFFDF7;color:#2E2E2E;font-size:14.9px;line-height:1.5;font-family:inherit}
 .topbar{background:#ffffff;border-bottom:2px solid #F0E6D6;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:1000;box-shadow:0 2px 16px rgba(0,0,0,.10)}
-.logo{display:flex;align-items:center}
+.logo{display:flex;align-items:center;flex-shrink:0}
 .topbar-logo{height:80px;width:auto;display:block;object-fit:contain}
 .topbar-title{flex:1;text-align:center;font-size:25.3px;font-weight:700;white-space:nowrap;color:#2E2E2E;letter-spacing:0.01em}
 .panel{display:block;padding:24px 28px;border-top:2px solid #F0E6D6}
@@ -1124,8 +1124,10 @@
   }
   /* Panel padding */
   .panel{padding:18px 16px}
-  .topbar{padding:10px 16px}
-  .topbar-title{font-size:16.1px}
+  /* Header: stack logos on top row, title below */
+  .topbar{flex-wrap:wrap;padding:10px 14px;gap:8px}
+  .topbar-title{order:3;width:100%;text-align:center;font-size:13px;font-weight:700;white-space:normal;line-height:1.4;padding:4px 0 2px}
+  .topbar-logo{height:48px}
 }
 
 @media(max-width:380px){
