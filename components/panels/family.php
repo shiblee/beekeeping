@@ -1,7 +1,6 @@
 <!-- ══ FAMILY & LAND ══ -->
 <div id="p-family" class="panel">
-  <div class="sh">Sections 1.13 · 1.14 · 2 — Family demographics & land use</div>
-  <div class="st">Household structure and land holdings</div>
+
   <div class="g2">
     <div class="cc"><div class="ct">Family size distribution (sec 1.13)</div><div class="cs">Average members per household</div>
       <div class="band band-green" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px">

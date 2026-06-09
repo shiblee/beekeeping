@@ -1,10 +1,3 @@
-function sw(id,btn){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  document.getElementById('p-'+id).classList.add('on');
-  btn.classList.add('on');
-}
-
 new Chart(document.getElementById('trendC'),{
   type:'line',
   data:{

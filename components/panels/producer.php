@@ -1,7 +1,6 @@
 <!-- ══ PRODUCER INFO ══ -->
 <div id="p-producer" class="panel">
-  <div class="sh">Section 1 — Producer demographics</div>
-  <div class="st">Who are the beekeepers?</div>
+
   <div class="kpi-g">
     <div class="kc"><div class="ki" style="--ib:#E3F2FD">👤</div><div class="kn">10,482</div><div class="kl">Registered producers</div></div>
     <div class="kc"><div class="ki" style="--ib:#FFF3D6">📅</div><div class="kn">41 yrs</div><div class="kl">Average age</div><div class="kt ty">Range 18–80</div></div>
